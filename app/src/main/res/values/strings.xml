@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">CarConnect</string>
+    <string name="car">Car</string>
+    <string name="connect">Connect</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="new_car">New</string>
+    <string name="used">Used</string>
+    <string name="compare">Compare</string>
+    <string name="compare_4cars">Compare upto 4 Cars</string>
+    <string name="add_compare">Add Car to compare</string>
+    <string name="news">News</string>
+    <string name="wallet">Wallet</string>
+    <string name="popular_new_car">Popular New Cars</string>
+    <string name="featured_articles">Featured Articles</string>
+    <string name="popular_used_car">Popular Used Cars</string>
+    <string name="view_new_cars">View All New cars</string>
+    <string name="search_used_car">Search Used Cars</string>
+    <string name="comparison">Start a new Comparison</string>
+    <string name="trend_comparison">Trending Comparison</string>
+    <string name="latest_news">Latest News</string>
+    <string name="more_news">Load More News</string>
+    <string name="seller_details">Get Seller Details</string>
+    <string name="brand">Brand</string>
+    <string name="popular_brand">Popular Brands</string>
+    <string name="other_brand">Other Brands</string>
+    <string name="model">Model</string>
+    <string name="variant">Variant</string>
+    <string name="maruti">Maruti Suzuki</string>
+    <string name="toyota">Toyota</string>
+    <string name="hyundai">Hyundai</string>
+    <string name="volkswagon">Volkswagon</string>
+    <string name="tata">Tata</string>
+    <string name="dutsun">Dutsun</string>
+    <string name="renault">Renault</string>
+    <string name="audi">Audi</string>
+    <string name="ford">Ford</string>
+    <string name="honda">Honda</string>
+    <string name="mahindra">Mahindra</string>
+    <string name="nissan">Nissan</string>
+    <string name="select_model">Select Model</string>
+    <string name="select_variant">Select Variant</string>
+
+</resources>

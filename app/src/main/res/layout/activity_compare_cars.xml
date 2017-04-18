@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.aritron.carconnect.activity.CompareCarsActivity">
+
+
+    <include
+        android:id="@+id/toolbar_compare_cars"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_compare_cars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:visibility="visible"
+        android:elevation="12dp"/>
+
+    <Button
+        android:id="@+id/btn_add_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_compare_style"
+        android:layout_margin="@dimen/margin_left"
+        android:text="+ ADD CAR"
+        android:textSize="@dimen/textsize_medium"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+</LinearLayout>

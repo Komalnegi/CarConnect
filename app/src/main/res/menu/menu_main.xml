@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Single menu_main item
+         Set id, icon and Title for each menu_main item
+    -->
+    <item
+        android:id="@+id/menu_fav"
+        android:icon="@drawable/ic_fav"
+        android:title="Favourite"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always" />
+    <!--<item
+        android:id="@+id/menu_conversation"
+        android:icon="@drawable/ic_conversation_white"
+        android:title="Conversation"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_user_info"
+        android:icon="@drawable/ic_user_info"
+        android:title="Search"
+        app:showAsAction="always" />-->
+</menu>

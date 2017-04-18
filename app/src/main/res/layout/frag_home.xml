@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/featured_articles"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_large"
+                android:layout_marginLeft="@dimen/margin_left_left"
+                android:layout_marginTop="@dimen/margin_top"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_more"
+                android:layout_marginTop="@dimen/margin_small"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_top_top"
+            android:background="@color/white">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/colorAccent"/>
+
+            <LinearLayout
+                android:id="@+id/layoutDots"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/view_pager">
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_top"
+        android:padding="@dimen/padding_outer">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popular_new_car"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_large"
+                android:layout_marginLeft="@dimen/margin_left_left"
+                android:layout_marginTop="@dimen/margin_top"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_more"
+                android:layout_marginTop="@dimen/margin_small"/>
+        </LinearLayout>
+        <in.arjsna.swipecardlib.SwipeCardView
+            android:id="@+id/swipe_card_view_popular_new_cars"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:rotation_degrees="15.5"
+            app:bottom_swipe_detect="false"
+            android:background="@color/white"
+            app:max_visible="100"
+            android:layout_margin="@dimen/margin_top_top" />
+
+        <TextView
+            android:id="@+id/txt_new_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_new_cars"
+            android:textSize="@dimen/textsize_medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_small"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_top"
+        android:padding="@dimen/padding_outer">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popular_used_car"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_large"
+                android:layout_marginLeft="@dimen/margin_left_left"
+                android:layout_marginTop="@dimen/margin_top"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_more"
+                android:layout_marginTop="@dimen/margin_small"/>
+        </LinearLayout>
+        <in.arjsna.swipecardlib.SwipeCardView
+            android:id="@+id/swipe_card_view_popular_used_cars"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:rotation_degrees="15.5"
+            app:bottom_swipe_detect="false"
+            android:background="@color/white"
+            tools:context=".CardSwipeActivity"
+            app:max_visible="100"
+            android:layout_margin="@dimen/margin_top_top"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_used_car"
+            android:textSize="@dimen/textsize_medium"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_top"
+        android:padding="@dimen/padding_outer">
+
+        <in.arjsna.swipecardlib.SwipeCardView
+            android:id="@+id/swipe_card_view_new_comparison"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:rotation_degrees="15.5"
+            app:bottom_swipe_detect="false"
+            android:background="@color/white"
+            tools:context=".CardSwipeActivity"
+            app:max_visible="100"
+            android:layout_margin="@dimen/margin_top_top"/>
+        <TextView
+            android:id="@+id/txt_new_comparison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comparison"
+            android:textSize="@dimen/textsize_medium"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_top"
+        android:padding="@dimen/padding_outer">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/latest_news"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_large"
+                android:layout_marginLeft="@dimen/margin_left_left"
+                android:layout_marginTop="@dimen/margin_top"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_more"
+                android:layout_marginTop="@dimen/margin_small"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/default_car_image"
+            android:layout_marginLeft="@dimen/margin_top_top"
+            android:layout_marginRight="@dimen/margin_top_top"
+            android:layout_marginTop="@dimen/margin_top_top"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toyota"
+            android:textSize="@dimen/textsize_large"
+            android:layout_marginLeft="@dimen/margin_top_top"
+            android:layout_marginTop="@dimen/margin_top"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08 March 2017"
+            android:layout_marginLeft="@dimen/margin_top_top"
+            android:layout_marginTop="@dimen/margin_top"
+            android:textSize="@dimen/textsize_medium"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_latest_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_top_top"
+            android:layout_marginRight="@dimen/margin_top_top"
+            android:layout_marginTop="@dimen/margin_top_top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/more_news"
+            android:textSize="@dimen/textsize_medium"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="@dimen/margin_top_top"/>
+    </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>

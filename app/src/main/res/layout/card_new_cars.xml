@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/lay_card_new_cars"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:layout_marginTop="@dimen/margin_top">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager_new_car"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/margin_right"
+            android:background="@color/colorAccent" />
+
+        <LinearLayout
+            android:id="@+id/lay_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/view_pager_new_car">
+
+            <TextView
+                android:id="@+id/txt_car_used_car_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:text="Car Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_used_car_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_left"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Car Cost"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txtsize_medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutDots_used_cars"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_below="@+id/view_pager_new_car"
+            android:layout_toRightOf="@+id/lay_car">
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_small"
+        android:padding="@dimen/padding_outer">
+    <TextView
+        android:id="@+id/txt_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/margin_left_left"/>
+        <TextView
+            android:id="@+id/txt_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15,857 Km"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:id="@+id/txt_fuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Diesel"
+            android:textColor="@color/black"
+            android:layout_marginRight="@dimen/margin_left_left"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_small">
+
+       <Button
+           android:layout_width="250dp"
+           android:layout_height="60dp"
+           android:background="@drawable/btn_colorprimary_style"
+           android:text="@string/seller_details"
+           android:textColor="@color/white"
+           android:textSize="@dimen/textsize_medium"
+           android:layout_marginLeft="@dimen/margin_left_left"
+           android:layout_marginTop="@dimen/margin_top"
+           android:layout_marginBottom="@dimen/margin_bottom"/>
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@color/colorAccent"
+            android:layout_marginLeft="@dimen/margin_left_left"
+            android:layout_marginTop="@dimen/margin_top">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_helpline"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
+    </android.support.v7.widget.CardView>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/padding_outer">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_top_top"
+        android:layout_marginTop="@dimen/margin_top">
+
+        <ImageView
+            android:id="@+id/img_car1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/car_image"/>
+        <TextView
+            android:id="@+id/txt_car1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tata Tiago"
+            android:textSize="@dimen/textsize_medium"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/circle_style_black"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/margin_top">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_top_top"
+        android:layout_marginTop="@dimen/margin_top">
+
+        <ImageView
+            android:id="@+id/img_car2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/car_image"/>
+        <TextView
+            android:id="@+id/txt_car2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tata Tiago"
+            android:textSize="@dimen/textsize_medium"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+</LinearLayout>
