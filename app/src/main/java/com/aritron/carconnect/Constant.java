@@ -6,4 +6,6 @@ package com.aritron.carconnect;
 
 public class Constant {
     public static final int SPLASH_TIMEOUT = 3000;
+    public static final int TYPE_HEADER = 0;
+    public static final int TYPE_ITEM = 1;
 }

@@ -3,6 +3,7 @@
     android:id="@+id/lay_card_new_cars"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_bottom"
     xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,19 +19,19 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/view_pager_new_car"
+        <ImageView
+            android:id="@+id/img_new_car"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="@dimen/margin_right"
-            android:background="@color/colorAccent" />
+            android:background="@drawable/default_car_image" />
 
         <LinearLayout
             android:id="@+id/lay_car"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_below="@+id/view_pager_new_car">
+            android:layout_below="@+id/img_new_car">
 
             <TextView
                 android:id="@+id/txt_car_used_car_name"
@@ -52,16 +53,6 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/txtsize_medium" />
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/layoutDots_used_cars"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_below="@+id/view_pager_new_car"
-            android:layout_toRightOf="@+id/lay_car">
-
-        </LinearLayout>
 
 
     </RelativeLayout>
@@ -70,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginTop="2dp"
         android:padding="@dimen/padding_outer">
     <TextView
         android:id="@+id/txt_year"
@@ -100,7 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:layout_marginTop="@dimen/margin_small">
+        android:layout_marginTop="2dp">
 
        <Button
            android:layout_width="250dp"

@@ -3,6 +3,7 @@ package com.aritron.carconnect.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.sax.StartElementListener;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,7 @@ import in.arjsna.swipecardlib.SwipeCardView;
  * Created by Komal on 04-04-2017.
  */
 
-public class CompareFragment extends android.app.Fragment implements View.OnClickListener{
+public class CompareFragment extends Fragment implements View.OnClickListener{
     private View view;
     public SwipeCardView swipeCardView_new_comparison;
     private ArrayList<NewComparisonCard> al;
@@ -40,7 +41,7 @@ public class CompareFragment extends android.app.Fragment implements View.OnClic
 
         al = new ArrayList<>();
         getDummyData(al);
-        arrayAdapter = new NewComparisonCardAdapter(getContext(), al);
+        arrayAdapter = new NewComparisonCardAdapter(getActivity(), al);
 
         swipeCardView_new_comparison = (SwipeCardView)view.findViewById(R.id.swipe_card_view_comparison);
         swipeCardView_new_comparison.setAdapter(arrayAdapter);
@@ -110,7 +111,7 @@ public class CompareFragment extends android.app.Fragment implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(getContext(), CompareActivity.class);
+        Intent intent = new Intent(getActivity(), CompareActivity.class);
         startActivity(intent);
     }
 }

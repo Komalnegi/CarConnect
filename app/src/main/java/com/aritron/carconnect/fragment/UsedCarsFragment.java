@@ -1,18 +1,21 @@
 package com.aritron.carconnect.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.aritron.carconnect.R;
+import com.aritron.carconnect.activity.CarDetailActivity;
+import com.aritron.carconnect.activity.NewCarsDetailActivity;
+import com.aritron.carconnect.activity.UsedCarDetailActivity;
 import com.aritron.carconnect.adapter.MyViewPagerAdapter;
-import com.aritron.carconnect.model.LatestNewsModel;
+import com.aritron.carconnect.model.NewCars;
 import com.aritron.carconnect.model.UsedCarModel;
 import com.aritron.carconnect.recycler.RcycleViewHandler;
 import com.aritron.carconnect.recycler.RcycleViewLayoutItem;
@@ -23,7 +26,7 @@ import java.util.ArrayList;
  * Created by Komal on 10-04-2017.
  */
 
-public class UsedCarsFragment extends android.app.Fragment {
+public class UsedCarsFragment extends Fragment {
     private View view;
     private ArrayList<UsedCarModel> usedCarModelArrayList = new ArrayList<>();
     private ViewPager viewPager;
@@ -171,9 +174,20 @@ public class UsedCarsFragment extends android.app.Fragment {
                 },
                 null);
 
+        RcycleViewLayoutItem onClick = new RcycleViewLayoutItem<>("onClick",
+                R.id.lay_card_new_cars,
+                null,
+                new RcycleViewLayoutItem.LayoutItemClickListner<UsedCarModel>() {
+                    @Override
+                    public void layoutItemOnClick(UsedCarModel model) {
+                        Intent intent = new Intent(getContext(),UsedCarDetailActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
         RcycleViewHandler rcView = new RcycleViewHandler<>(view,
                 R.id.recyclerview_used_cars,
-                R.layout.card_new_cars,
+                R.layout.card_used_cars,
                 usedCarModelArrayList);
 
         //rcView.addLayoutItem(carImage);
@@ -182,6 +196,7 @@ public class UsedCarsFragment extends android.app.Fragment {
         rcView.addLayoutItem(year);
         rcView.addLayoutItem(speed);
         rcView.addLayoutItem(fuel);
+        rcView.addLayoutItem(onClick);
 
         rcView.render(view);
     }

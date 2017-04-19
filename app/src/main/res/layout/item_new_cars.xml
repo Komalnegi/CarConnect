@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.v7.widget.CardView
+    android:id="@+id/card_car_detail"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@color/grey"
-    >
-<android.support.v7.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/margin_bottom">
-<ImageView
-    android:id="@+id/img_car"
-    android:layout_width="match_parent"
-    android:layout_height="200dp" />
-
-    <TextView
-        android:id="@+id/txt_car_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Toyota"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/textsize_large"
-        android:layout_marginLeft="@dimen/margin_left"
-        android:layout_marginTop="@dimen/margin_top"/>
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/margin_top">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="@dimen/margin_left_left"
-        android:layout_marginTop="@dimen/margin_top">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_car"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
 
         <TextView
-            android:id="@+id/txt_car_cc"
+            android:id="@+id/txt_car_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginTop="@dimen/margin_top"
+            android:text="Toyota"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textsize_large" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2393 CC"
-            android:textSize="@dimen/textsize_medium"/>
-        <TextView
-        android:id="@+id/txt_car_speed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-            android:text="13.68 KMPL"
             android:layout_marginLeft="@dimen/margin_left_left"
-            android:textSize="@dimen/textsize_medium"/>
-        <TextView
-        android:id="@+id/txt_car_rate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-            android:text="28,179 EMI"
-            android:layout_marginLeft="@dimen/margin_left_left"
-            android:textSize="@dimen/textsize_medium"/>
+            android:layout_marginTop="@dimen/margin_top"
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/txt_car_cc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2393 CC"
+                android:textSize="@dimen/textsize_medium" />
+
+            <TextView
+                android:id="@+id/txt_car_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_left"
+                android:text="13.68 KMPL"
+                android:textSize="@dimen/textsize_medium" />
+
+            <TextView
+                android:id="@+id/txt_car_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_left"
+                android:text="28,179 EMI"
+                android:textSize="@dimen/textsize_medium" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_car_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_left"
+            android:layout_marginTop="@dimen/margin_top_top"
+            android:text="13.99-21.19 Lakh"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_medium" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/txt_car_cost"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="13.99-21.19 Lakh"
-        android:textSize="@dimen/textsize_medium"
-        android:layout_marginLeft="@dimen/margin_left_left"
-        android:layout_marginTop="@dimen/margin_top_top"
-        android:textColor="@color/black"/>
-</LinearLayout>
 </android.support.v7.widget.CardView>
-    </LinearLayout>

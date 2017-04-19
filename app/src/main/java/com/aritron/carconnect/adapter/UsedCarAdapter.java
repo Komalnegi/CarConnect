@@ -29,7 +29,7 @@ public class UsedCarAdapter extends ArrayAdapter<Card> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Card card = cards.get(position);
-        View view = layoutInflater.inflate(R.layout.card_new_cars, parent, false);
+        View view = layoutInflater.inflate(R.layout.card_used_cars, parent, false);
         ((ImageView) view.findViewById(R.id.card_image)).setImageResource(card.imageId);
         return view;
     }

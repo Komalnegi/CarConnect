@@ -41,4 +41,32 @@
     <string name="select_model">Select Model</string>
     <string name="select_variant">Select Variant</string>
 
+    <string name="title_home">Home</string>
+    <string name="title_enquiries">Enquiries</string>
+    <string name="title_quotation">Quotation</string>
+    <string name="title_orders">Orders</string>
+    <string name="title_transaction">Payments</string>
+    <string name="title_vehicle">Vehicle</string>
+    <string name="title_drivers">Drivers</string>
+    <string name="title_alerts">Alerts</string>
+    <string name="title_tracker">Tracker</string>
+    <string name="title_Document">Document</string>
+    <string name="title_help">Help &amp; Support</string>
+    <string name="title_logout">Logout</string>
+    <string name="search_new_cars">Search New Cars</string>
+    <string name="further_research">Further Research on this Car</string>
+
+    <string-array name="nav_drawer_item">
+        <item>@string/title_home</item>
+        <item>My Cars</item>
+        <item>New Cars</item>
+        <item>Used Cars</item>
+        <item>Upcoming Cars</item>
+        <item>Compare Cars</item>
+        <item>Classified</item>
+        <item>Offers and Promotions</item>
+        <item>News</item>
+    </string-array>
+
+
 </resources>

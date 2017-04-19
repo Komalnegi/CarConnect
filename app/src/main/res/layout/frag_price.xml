@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lay_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/padding_outer"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginLeft="@dimen/margin_left_left"
+        android:layout_marginRight="@dimen/margin_left_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price Range"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_large"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_top">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Lakh"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5 Cr"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="SEARCH"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_medium"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_bottom" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginLeft="@dimen/margin_left_left"
+        android:layout_marginRight="@dimen/margin_left_left"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_below="@+id/lay_filter"
+        android:layout_above="@+id/btn_search">
+    <Button
+        android:id="@+id/btn_show_more_filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="+ SHOW MORE FILTERS"
+        android:textColor="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:id="@+id/lay_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brands"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_large"
+            android:gravity="center"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_brand_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="12dp"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_top"/>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -3,6 +3,7 @@ package com.aritron.carconnect.fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -29,7 +30,7 @@ import in.arjsna.swipecardlib.SwipeCardView;
  * Created by Komal on 06-04-2017.
  */
 
-public class HomeFragment extends android.app.Fragment implements View.OnClickListener{
+public class HomeFragment extends Fragment implements View.OnClickListener{
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
@@ -76,14 +77,14 @@ public class HomeFragment extends android.app.Fragment implements View.OnClickLi
         // adding bottom dots
         addBottomDots(0);
 
-        myViewPagerAdapter = new MyViewPagerAdapter(getContext(),layouts);
+        myViewPagerAdapter = new MyViewPagerAdapter(getActivity(),layouts);
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
 
         al = new ArrayList<>();
         getDummyData(al);
-        arrayAdapter = new CardsAdapter(getContext(), al);
+        arrayAdapter = new CardsAdapter(getActivity(), al);
 
         swipeCardView_new_car = (SwipeCardView)view.findViewById(R.id.swipe_card_view_popular_new_cars);
         swipeCardView_new_car.setAdapter(arrayAdapter);
@@ -123,7 +124,7 @@ public class HomeFragment extends android.app.Fragment implements View.OnClickLi
 
         a2 = new ArrayList<>();
         getDummyData(a2);
-        arrayAdapter = new CardsAdapter(getContext(), a2);
+        arrayAdapter = new CardsAdapter(getActivity(), a2);
 
         swipeCardView_used_car = (SwipeCardView)view.findViewById(R.id.swipe_card_view_popular_used_cars);
         swipeCardView_used_car.setAdapter(arrayAdapter);
@@ -162,7 +163,7 @@ public class HomeFragment extends android.app.Fragment implements View.OnClickLi
 
         a3 = new ArrayList<>();
         getDummyData(a3);
-        arrayAdapter = new CardsAdapter(getContext(), a3);
+        arrayAdapter = new CardsAdapter(getActivity(), a3);
 
         swipeCardView_new_comparison = (SwipeCardView)view.findViewById(R.id.swipe_card_view_new_comparison);
         swipeCardView_new_comparison.setAdapter(arrayAdapter);
@@ -273,7 +274,7 @@ public class HomeFragment extends android.app.Fragment implements View.OnClickLi
 
         dotsLayout.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
-            dots[i] = new TextView(getContext());
+            dots[i] = new TextView(getActivity());
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
             dots[i].setTextColor(colorsInactive[currentPage]);
@@ -319,13 +320,13 @@ public class HomeFragment extends android.app.Fragment implements View.OnClickLi
         int id = v.getId();
         switch(id){
             case R.id.txt_new_car:
-                Intent intent = new Intent(getContext(),ViewNewCarsActivity.class);
+                Intent intent = new Intent(getActivity(),ViewNewCarsActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.txt_new_comparison:
                 CompareFragment compareFragment = new CompareFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                android.support.v4.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.fragment_frame,compareFragment);
                 transaction.commit();
                 break;

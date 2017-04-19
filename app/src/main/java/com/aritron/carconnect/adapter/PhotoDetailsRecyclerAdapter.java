@@ -23,7 +23,7 @@ public class PhotoDetailsRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_new_cars, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_used_cars, parent, false);
         return new CommentsAndLikesViewHolder(view);
     }
 

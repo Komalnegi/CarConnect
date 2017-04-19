@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    tools:context="com.aritron.carconnect.activity.CarDetailActivity">
+
+    <include
+        android:id="@+id/toolbar_car_detail"
+        layout="@layout/toolbar_compare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/lay_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_below="@+id/toolbar_car_detail">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Maruti"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_medium"
+        android:layout_marginTop="@dimen/margin_top"/>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@drawable/default_car_image"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Estimated Price:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_medium"
+        android:layout_marginTop="@dimen/margin_top"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="5.44-8.08 Lakh"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_medium"
+        android:layout_marginTop="@dimen/margin_small"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="News Highlights"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_below="@+id/lay_detail"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="News Highlights"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        android:padding="@dimen/padding_outer"
+        android:background="@color/white"
+        android:layout_below="@+id/txt_news"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/txt_alert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ALERT ME WHEN LAUNCHED"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_small"
+            android:background="@color/colorPrimary"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="PICTURES"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_small"
+            android:background="@color/grey"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>

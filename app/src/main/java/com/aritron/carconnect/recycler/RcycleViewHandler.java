@@ -79,6 +79,15 @@ public class RcycleViewHandler <T> {
         DisplayRowAdapter devRowAdapter = new DisplayRowAdapter<T>(this);
         deviceListView.setAdapter(devRowAdapter);
     }
+    public void renderGridView(View view) {
+        RecyclerView deviceListView = (RecyclerView) view.findViewById(rcViewId);
+        deviceListView.setHasFixedSize(true);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context,4);
+        deviceListView.setLayoutManager(mLayoutManager);
+
+        DisplayRowAdapter devRowAdapter = new DisplayRowAdapter<T>(this);
+        deviceListView.setAdapter(devRowAdapter);
+    }
     public List<T> getObjectList(){
         return objectList;
     }

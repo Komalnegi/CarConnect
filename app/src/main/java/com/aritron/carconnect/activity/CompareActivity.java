@@ -1,6 +1,8 @@
 package com.aritron.carconnect.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -14,10 +16,13 @@ import android.widget.TextView;
 import com.aritron.carconnect.R;
 import com.aritron.carconnect.adapter.GridAdapter;
 import com.aritron.carconnect.model.BrandModel;
+import com.aritron.carconnect.model.CompareCarsModel;
+import com.aritron.carconnect.model.CompareList;
 import com.aritron.carconnect.model.ModelSelectionModel;
 import com.aritron.carconnect.model.VariantModel;
 import com.aritron.carconnect.recycler.RcycleViewHandler;
 import com.aritron.carconnect.recycler.RcycleViewLayoutItem;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -31,6 +36,9 @@ public class CompareActivity extends AppCompatActivity {
     private TextView mPopularBrand,mSelectModel,mSelectVariant,mToolbarTitle;
     private LinearLayout mOtherBrandLayout;
     private String mCarName,mVariantName,mcarCost,mCarFuel;
+    private CompareList compareList;
+    private CompareCarsModel compareCarsModel;
+    private SharedPreferences appSharedPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +61,6 @@ public class CompareActivity extends AppCompatActivity {
         mToolbarTitle.setText("Select Brand");
 
         setGridRecycler();
-
 
         BrandModel brandModel = new BrandModel("Maruti Suzuki", R.drawable.ic_maruti_suzuki);
         BrandModel brandModel1 = new BrandModel("Toyota", R.drawable.ic_toyota);
@@ -275,7 +282,20 @@ public class CompareActivity extends AppCompatActivity {
                     public void layoutItemOnClick(VariantModel model) {
                         mVariantName = model.getName();
                         Intent intent = new Intent(CompareActivity.this,CompareCarsActivity.class);
+                        /*compareCarsModel = new CompareCarsModel(R.drawable.car_image,mCarName,
+                                mVariantName,mcarCost,mCarFuel);
+                        Gson gson = new Gson();
+                        String json = gson.toJson(compareCarsModel);*/
+
+                        /*appSharedPrefs = PreferenceManager
+                                .getDefaultSharedPreferences(CompareActivity.this);
+                        SharedPreferences.Editor prefsEditor = appSharedPrefs.edit();
+                        json = gson.toJson(compareCarsModel);*/
+
                         Bundle bundle = new Bundle();
+                        /*bundle.putString("json",json);
+                        intent.putExtras(bundle);*/
+                        //Bundle bundle = new Bundle();
                         bundle.putString("carName",mCarName);
                         bundle.putString("variantName",mVariantName);
                         bundle.putString("carCost",mcarCost);

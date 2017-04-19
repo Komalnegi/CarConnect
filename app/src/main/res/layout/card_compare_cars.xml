@@ -11,6 +11,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/margin_top">
         <ImageView
+            android:id="@+id/img_car_compare"
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:background="@drawable/car_image"/>

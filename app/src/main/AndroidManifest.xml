@@ -22,8 +22,12 @@
         <activity android:name=".activity.ClassifiedActivity" />
         <activity android:name=".activity.PopularCarsActivity" />
         <activity android:name=".activity.CompareActivity" />
-        <activity android:name=".activity.CompareCarsActivity"
-            android:label="Compare Cars"></activity>
+        <activity
+            android:name=".activity.CompareCarsActivity"
+            android:label="Compare Cars" />
+        <activity android:name=".activity.NewCarsDetailActivity" />
+        <activity android:name=".activity.CarDetailActivity" />
+        <activity android:name=".activity.UsedCarDetailActivity"></activity>
     </application>
 
 </manifest>
